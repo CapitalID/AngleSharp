@@ -15,6 +15,15 @@
         /// </summary>
         public static readonly IMarkupFormatter Instance = new HtmlMarkupFormatter();
 
+        /// <summary>
+        /// ChildFormatter Property
+        /// </summary>
+        public IMarkupFormatter ChildFormatter
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region Methods
