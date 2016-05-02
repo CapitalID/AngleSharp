@@ -21,10 +21,7 @@
                 </html>
                 ").ToXmlDocument();
 
-            StringWriter sw = new StringWriter();
-            document.ToHtml(sw, XHtml.XhtmlMarkupFormatter.Instance);
-
-            string result = sw.ToString();
+            string result = document.ToHtml(XHtml.XhtmlMarkupFormatter.Instance);
 
             int c = 0, i = -1;
             while ( (i = result.IndexOf("/>", i+1)) >= 0)
@@ -60,10 +57,7 @@
                 </html>
                 ").ToXmlDocument();
 
-            StringWriter sw = new StringWriter();
-            document.ToHtml(sw, XHtml.XhtmlMarkupFormatter.Instance);
-
-            string result = sw.ToString();
+            string result = document.ToHtml(XHtml.XhtmlMarkupFormatter.Instance);
 
             int c = 0, i = -1;
             while ((i = result.IndexOf("/>", i + 1)) >= 0)

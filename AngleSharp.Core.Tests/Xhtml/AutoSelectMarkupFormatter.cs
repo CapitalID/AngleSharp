@@ -21,9 +21,7 @@
                 </html>
                 ").ToHtmlDocument();
 
-            StringWriter swResult = new StringWriter();
-            document.ToHtml(swResult, new AutoSelectedMarkupFormatter(document.Doctype));
-            string result = swResult.ToString();
+            string result = document.ToHtml(new AutoSelectedMarkupFormatter(document.Doctype));
 
             int c = 0, i = -1;
             while ((i = result.IndexOf("/>", i + 1)) >= 0)
@@ -59,9 +57,7 @@
                 </html>
                 ").ToHtmlDocument();
 
-            StringWriter swResult = new StringWriter();
-            document.ToHtml(swResult, new AutoSelectedMarkupFormatter(document.Doctype));
-            string result = swResult.ToString();
+            string result = document.ToHtml(new AutoSelectedMarkupFormatter(document.Doctype));
 
             int c = 0, i = -1;
             while ((i = result.IndexOf("/>", i + 1)) >= 0)

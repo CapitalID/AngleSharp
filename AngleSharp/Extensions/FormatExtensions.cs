@@ -28,5 +28,5 @@
         {
             return markup.ToHtml(HtmlMarkupFormatter.Instance);
         }
-
+    }
 }
